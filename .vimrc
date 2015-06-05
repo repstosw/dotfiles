@@ -37,8 +37,6 @@ set expandtab
 
 set wrap
 
-"let g:syntastic_python_checkers=['pyflakes']
-" set number
 nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
 
 hi colorcolumn guifg=DarkRed guibg=Black
@@ -50,14 +48,6 @@ fun! SetOverLength()
     execute "set colorcolumn=" . join(range(80,100),',')
 endfun
 
-" SuperTab stuff
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-let g:SuperTabDefaultCompletionType = "context"
-set completeopt=menuone,longest,preview
-
-" Powerline
-set rtp+=.vim/bundle/powerline/powerline/bindings/vim
-
 map <F7> :w<CR>:!python % <CR>
 map <F10> :shell <CR>
 
@@ -67,17 +57,6 @@ map <silent><leader>n :NERDTreeToggle<CR>
 " minibufexplorer
 map <silent><leader>b :TMiniBufExplorer<CR>
 let g:miniBufExplMapWindowNavVim = 1
-
-" indent guides
-let g:indent_guides_color_change_percent = 2
-let g:indent_guides_guide_size = 1
-let g:indent_guides_start_level = 2
-
-" PEP8
-let g:pep8_map='<leader>8'
-
-" Column limits
-" execute "set colorcolumn=" . join(range(80,334),',')
 
 noremap <F4> :set hlsearch! hlsearch?<CR>
 
