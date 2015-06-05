@@ -56,7 +56,7 @@ map <F10> :shell <CR>
 map <silent><leader>n :NERDTreeToggle<CR>
 
 " minibufexplorer
-map <silent><leader>b :TMiniBufExplorer<CR>
+map <silent><leader>b :MBEToggle<CR>
 let g:miniBufExplMapWindowNavVim = 1
 
 
