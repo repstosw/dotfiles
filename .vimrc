@@ -1,3 +1,10 @@
+" Powerline setup
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+
+set laststatus=2
+
 " Load Pathogen
 filetype off
 execute pathogen#infect()
@@ -39,14 +46,7 @@ set wrap
 
 nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
 
-hi colorcolumn guifg=DarkRed guibg=Black
 autocmd BufNewFile,BufRead *.wsgi set filetype=python
-autocmd BufNewFile,BufRead *.py call SetOverLength()
-
-fun! SetOverLength()
-    "match OverLength /\%80v.*/
-    execute "set colorcolumn=" . join(range(80,100),',')
-endfun
 
 map <F7> :w<CR>:!python % <CR>
 map <F10> :shell <CR>
@@ -57,6 +57,7 @@ map <silent><leader>n :NERDTreeToggle<CR>
 " minibufexplorer
 map <silent><leader>b :TMiniBufExplorer<CR>
 let g:miniBufExplMapWindowNavVim = 1
+
 
 noremap <F4> :set hlsearch! hlsearch?<CR>
 
@@ -69,5 +70,4 @@ map <c-h> <c-w>h
 
 imap jj <Esc>
 
-" set statusline=\ %n\ -\ %f\ %m%r%=[%l/%L,%c]\ \ %p\%%
 
