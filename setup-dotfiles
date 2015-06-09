@@ -13,5 +13,5 @@ fi
 
 # Install powerline
 echo "Installing powerline-status"
-pip install powerline-status
+sudo pip install powerline-status
 
