@@ -15,3 +15,7 @@ fi
 echo "Installing powerline-status"
 sudo pip install powerline-status
 
+
+# Provide Vim a place to put swapfiles
+mkdir ~/.swp
+

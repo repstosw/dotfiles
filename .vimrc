@@ -19,6 +19,8 @@ syntax on
 filetype plugin on
 filetype indent on
 
+set directory=~/.swp
+
 set autoread
 set guioptions=agimt
 set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 10
