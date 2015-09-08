@@ -4,11 +4,18 @@ echo "Updating vim submodules"
 git submodule init
 git submodule update
 
-# Install pip, if necessary
-# This might be problematic on a non-Debian distro
-if [ $(dpkg-query -W -f='${Status}' python-pip 2>/dev/null | grep -c "ok installed") -eq 0 ]; then
-    echo "pip doesn't appear to be here, installing..."
-    sudo apt-get install python-pip
+# Make symlinks
+ln -s $PWD/.tmux.conf ~/.tmux.conf
+ln -s $PWD/.vimrc ~/.vimrc
+ln -s $PWD/.vim ~/.vim
+
+# Provide Vim a place to put swapfiles
+mkdir ~/.swp
+
+if [ $(command -v pip 2>/dev/null | grep -c "pip") -eq 0 ]; then
+    echo "pip doesn't appear to be installed"
+    echo "this is needed for some things"
+    exit 1
 fi
 
 # Install powerline
@@ -16,6 +23,4 @@ echo "Installing powerline-status"
 sudo pip install powerline-status
 
 
-# Provide Vim a place to put swapfiles
-mkdir ~/.swp
 
