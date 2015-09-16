@@ -12,6 +12,8 @@ fi
 
 PATH=$PATH:$SDK/platform-tools:$SDK/tools:~/android-ndk
 
+export LESS="-R"
+
 # get current branch in git repo
 function parse_git_branch() {
 	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
