@@ -72,6 +72,7 @@ map <c-l> <c-w>l
 map <c-h> <c-w>h
 
 
+set timeoutlen=250
 imap jj <Esc>
 
 
