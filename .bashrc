@@ -12,7 +12,7 @@ else
     NDK="~/android-ndk"
 fi
 
-PATH=$PATH:~/bin:$SDK/platform-tools:$SDK/tools:$NDK
+PATH=$PATH:~/bin:$SDK/platform-tools:$SDK/tools:$NDK:~/go/bin
 
 export LESS="-R"
 
