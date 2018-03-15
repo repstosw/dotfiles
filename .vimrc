@@ -14,7 +14,8 @@ execute pathogen#helptags()
 
 set history=700
 
-colorscheme molokai
+set background=dark
+colorscheme solarized
 filetype on
 syntax on
 filetype plugin on
