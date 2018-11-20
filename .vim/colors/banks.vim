@@ -41,7 +41,7 @@ hi Visual                   gui=none    guibg=#3a9b9b   guifg=#202020
 hi WarningMsg                               guifg=#ffff00
 hi CursorLine   gui=underline   guibg=#124676
 hi CursorLineNr gui=bold guibg=#2697F0   guifg=#FFFFFF
-hi CursorColumn guibg=#183550
+hi CursorColumn guibg=#124676
 hi VertSplit    guibg=#FFFFFF   guifg=#006545
 hi Pmenu        guibg=#1A2386 guifg=#AAFFAA
 hi PmenuSel     gui=bold guibg=#4053B6 guifg=#FFFFFF
