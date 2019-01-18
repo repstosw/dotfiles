@@ -1,8 +1,8 @@
 " Powerline setup
-python import sys; sys.path.append("/usr/local/lib/python2.7/site-packages/") 
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+"python import sys; sys.path.append("/usr/local/lib/python3.7/site-packages/") 
+"python from powerline.vim import setup as powerline_setup
+"python powerline_setup()
+"python del powerline_setup
 
 set t_Co=256
 set laststatus=2
