@@ -1,12 +1,22 @@
-git_branch () { git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'; }
-HOST='\033[02;36m\]\h'; HOST=''$HOST
-TIME='\033[01;31m\]\t \033[01;32m\]'
-LOCATION=' \033[01;34m\]`pwd | sed "s#\(/[^/]\{1,\}/[^/]\{1,\}/[^/]\{1,\}/\).*\(/[^/]\{1,\}/[^/]\{1,\}\)/\{0,1\}#\1_\2#g"`'
-BRANCH=' \033[00;33m\]$(git_branch) \[\033[00m\]\$ '
-PS1=$HOST$LOCATION$BRANCH
-PS2='\[\033[01;36m\]>'
+PROMPT_COMMAND=__prompt_command
 
-#export PS1="\$(parse_git_branch)\u@\h:\w \\$ "
+parse_git_branch () { 
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\($(echo -ne '\u2387') \1\)/g"; 
+}
+
+__prompt_command() {
+    local RESULT="$?"
+
+    if [ $RESULT != 0 ]; then
+        EXIT='\e[0;31m⚠\e[0m '
+    else 
+        EXIT=''
+    fi
+
+    PS1="\e[34m\w \e[36m\$(parse_git_branch)\n${EXIT}\e[30m[\!] \e[0m\u@\h $ "
+}
+
+
 alias ls='ls -Gp'
 alias lal='ls -al'
 alias ll='ls -l'
@@ -20,7 +30,7 @@ else
     NDK="~/android-ndk"
 fi
 
-PATH=$PATH:~/bin:$SDK/platform-tools:$SDK/tools:$NDK
+PATH=$PATH:~/bin:$SDK/platform-tools:$SDK/tools:$SDK/tools/proguard/bin:$NDK
 
 export LESS="-R"
 
