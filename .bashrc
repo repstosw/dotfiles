@@ -13,7 +13,7 @@ __prompt_command() {
         EXIT=''
     fi
 
-    PS1="\[\e[34m\]\w \[\e[36m\]\$(parse_git_branch)\n${EXIT}\[\e[30m\][\!] \[\e[0m\]\u@\h $ "
+    PS1="\[\e[35m\]\w \[\e[36m\]\$(parse_git_branch)\n${EXIT}\[\e[30m\][\!] \[\e[0m\]\u@\h $ "
 }
 
 
