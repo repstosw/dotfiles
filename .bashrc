@@ -8,12 +8,12 @@ __prompt_command() {
     local RESULT="$?"
 
     if [ $RESULT != 0 ]; then
-        EXIT='\e[0;31m⚠\e[0m '
+        EXIT='\[\e[0;31m\]⚠\[\e[0m\] '
     else 
         EXIT=''
     fi
 
-    PS1="\e[34m\w \e[36m\$(parse_git_branch)\n${EXIT}\e[30m[\!] \e[0m\u@\h $ "
+    PS1="\[\e[34m\]\w \[\e[36m\]\$(parse_git_branch)\n${EXIT}\[\e[30m\][\!] \[\e[0m\]\u@\h $ "
 }
 
 
