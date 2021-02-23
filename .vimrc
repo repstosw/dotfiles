@@ -53,7 +53,7 @@ nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
 
 autocmd BufNewFile,BufRead *.wsgi set filetype=python
 
-map <F7> :w<CR>:!python % <CR>
+map <F7> :w<CR>:!python3 % <CR>
 map <F8> :!%:p<CR>
 map <F10> :shell <CR>
 
