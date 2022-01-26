@@ -13,6 +13,7 @@ ln -s $PWD/.ideavimrc ~/.ideavimrc
 ln -s $PWD/.zshrc ~/.zshrc
 ln -s $PWN/.zshenv ~/.zshenv
 ln -s $PWD/.git-completion.zsh ~/.git-completion.zsh
+ln -s $PWD/.git-completion.bash ~/.git-completion.bash
 
 # Provide Vim a place to put swapfiles
 mkdir ~/.swp
@@ -22,6 +23,12 @@ if [ $(command -v pip3 2>/dev/null | grep -c "pip3") -eq 0 ]; then
     echo "this is needed for some things"
     exit 1
 fi
+
+# Install git completion
+mkdir -p ~/.zsh/completions
+curl "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh" > ~/.zsh/completions/_git
+curl "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash" > ~/.zsh/completions/git-completion.bash
+chmod a+x ~/.zsh/completions/_git
 
 # Install tmux-powerline
 echo "Installing tmux-powerline"

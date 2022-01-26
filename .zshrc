@@ -1,4 +1,7 @@
+autoload -Uz compinit && compinit
+fpath=(~/.zsh/completions $fpath)
 autoload -U color
+
 precmd() { eval __prompt_command }
 
 parse_git_branch () { 
@@ -18,9 +21,6 @@ __prompt_command() {
     RPROMPT="%F{black}[%h]"
 }
 
-if [ -f ~/.git-completion.zsh ]; then
-        . ~/.git-completion.zsh
-fi
 
 alias ls="ls -Gp"
 alias lal="ls -al"
