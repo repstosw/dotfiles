@@ -9,5 +9,3 @@ else
 fi
 
 PATH=$PATH:~/bin:$SDK/platform-tools:$SDK/tools:$SDK/tools/proguard/bin:$NDK
-PATH=$PATH:~/.jenv/bin:$PATH
-eval "$(jenv init -)"

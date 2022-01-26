@@ -28,3 +28,6 @@ alias ll="ls -l"
 
 alias aun="adb uninstall com.acmeaom.android.myradar"
 alias aunp="adb uninstall com.acmeaom.android.myradarpro"
+
+PATH=$PATH:~/.jenv/bin:$PATH
+eval "$(jenv init -)"
