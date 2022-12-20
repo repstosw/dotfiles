@@ -1,11 +1,11 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 if [ -d ~/Library/Android/sdk ]; then
-    SDK="~/Library/Android/sdk"
-    NDK="~/Library/Android/ndk"
+    SDK="$HOME/Library/Android/sdk"
+    NDK="$HOME/Library/Android/ndk"
 else 
-    SDK="~/android-sdk"
-    NDK="~/android-ndk"
+    SDK="$HOME/android-sdk"
+    NDK="$HOME/android-ndk"
 fi
 
 PATH=$PATH:~/bin:$SDK/platform-tools:$SDK/tools:$SDK/tools/proguard/bin:$NDK

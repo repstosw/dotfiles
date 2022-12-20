@@ -36,6 +36,7 @@ set ruler
 set cmdheight=2
 set hid
 set relativenumber
+set number
 set cursorline
 set cursorcolumn
 

@@ -26,8 +26,10 @@ alias ls="ls -Gp"
 alias lal="ls -al"
 alias ll="ls -l"
 
+alias find="noglob find"
+
 alias aun="adb uninstall com.acmeaom.android.myradar"
 alias aunp="adb uninstall com.acmeaom.android.myradarpro"
 
-PATH=$PATH:~/.jenv/bin:$PATH
+PATH=$PATH:~/.jenv/bin:~/Library/Android/sdk/ndk/23.1.7779620:~/Library/Android/sdk/cmdline-tools/latest:$PATH
 eval "$(jenv init -)"
